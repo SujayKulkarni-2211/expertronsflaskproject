@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Expertrons</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/expertronsstyle.css') }}">
+</head>
+
+<body>
+    <div class="hero-image">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <img src="{{ url_for('static', filename='images/Expertron logo.org.png') }}" alt="Logo" width="250">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Join Now</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#achievements">Achievements</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Partnerships</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Programmes Offered
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">BTech Graduates</a></li>
+                                <li><a class="dropdown-item" href="#">BE Graduates</a></li>
+                                <li><a class="dropdown-item" href="#">Masters</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hero-banner">
+            <div class="slogan">
+                <h1 class="typewriter">Transform Your Career <br class="mobilebr"> with JK-Expertrons</h1>
+                <iframe class="ytvideo" src="https://www.youtube.com/embed/2Y6YZMAe3uc?si=UGFH-n777CxGO-NF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="registration-form">
+                <h2>Admissions Open</h2>
+                <p>For Graduates and Final Year Students Only</p>
+                <form action="{{ url_for('submit_form') }}" method="POST">
+                    <input type="text" name="fullname" placeholder="Full Name:" required>
+                    <input type="email" name="email" placeholder="Email ID:" required>
+                    <select name="preferred_domain">
+                        <option value="">Select Domain</option>
+                        <option value="tech">Tech</option>
+                        <option value="business">Business</option>
+                        <option value="healthcare">Healthcare</option>
+                    </select>
+                    <select name="career_stage">
+                        <option value="">Career Stage</option>
+                        <option value="entry">Entry Level</option>
+                        <option value="mid">Mid Level</option>
+                        <option value="senior">Senior Level</option>
+                    </select>
+                    <input type="date" name="birthdate">
+                    <input type="time" name="time" placeholder="Time">
+                    <button type="submit">Register Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <section id="achievements" class="achievements-section" style="margin-left: 600px;margin-top: 23px;">
+        <!-- Add your achievements content here -->
+    </section>
+    <section id="additional-content" class="d-flex justify-content-center flex-wrap">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+        <div class="collage" style="margin-left: 20px;">
+            <table style="border-collapse: collapse;">
+                <tr>
+                    <td style="border: 0px"><img src="{{ url_for('static', filename='images/Achievement 1.png') }}" alt="Achievement 1"></td>
+                    <td style="border: 0px"><img src="{{ url_for('static', filename='images/Achievement 2.png') }}" alt="Achievement 2"></td>
+                </tr>
+                <tr>
+                    <td style="border: 0px"><img src="{{ url_for('static', filename='images/Achivement 3.png') }}" alt="Achivement 3"></td>
+                    <td style="border: 0px"><img src="{{ url_for('static', filename='images/Achievement 4.png') }}" alt="Achievement 4"></td>
+                </tr>
+            </table>
+        </div></div>
+        <!-- <div class="gif-animation">
+            <img src="{{ url_for('static', filename='images/output-onlinegiftools.gif') }}" alt="Animated GIF" width="400">
+        </div> -->
+        <div class="col-md-6 col-sm-12">
+        <div class="achievements-list">
+            <div class="achievement-box">
+                <h3 class="floating-text" data-target="124000000">124,000,000+</h3>
+                <p>Minutes spent on App</p>
+            </div>
+            <div class="achievement-box">
+                <h3 class="floating-text" data-target="7500">7500+</h3>
+                <p>Live Experts</p>
+            </div>
+            <div class="achievement-box">
+                <h3 class="floating-text" data-target="20000">20,000+</h3>
+                <p>Total aspirants Trained</p>
+            </div>
+            <div class="achievement-box">
+                <h3 class="floating-text" data-target="100000">1,00,000+</h3>
+                <p>Minutes of career hacks</p>
+            </div>
+        </div></div></div>
+    </section>
+    <div class="charts-container d-flex justify-content-center flex-wrap">
+        
+        <div class="chart">
+            {{ charts_div.placement_chart_div | safe }}
+        </div>
+        <div class="chart">
+            {{ charts_div.completion_rate_chart_div | safe }}
+        </div>
+        <div class="chart">
+            {{ charts_div.fastest_placement_chart_div | safe }}
+        </div>
+    
+    
+        <div class="chart">
+            {{ charts_div.mentors_chart_div | safe }}
+        </div>
+        <div class="chart">
+            {{ charts_div.successful_placements_chart_div | safe }}
+        </div>
+        
+    </div>
+    <!-- Programmes Offered Section -->
+<section id="programmes-offered" class="programmes-offered-section">
+    <div class="container">
+        <h2>Programmes Offered</h2>
+        <div class="row">
+            <!-- Program Card 1: Banking -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Banking</h5>
+                        <p class="card-text">Explore our Banking programme for a career in finance.</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#registerModal" data-program="Banking" onclick="setProgram('Banking')">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Program Card 2: Finance -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Finance</h5>
+                        <p class="card-text">Join our Finance programme to excel in financial management.</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#registerModal" data-program="Finance" onclick="setProgram('Finance')">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Program Card 3: Accounting and Taxation -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Accounting and Taxation</h5>
+                        <p class="card-text">Learn Accounting and Taxation with our expert guidance.</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#registerModal" data-program="Accounting and Taxation" onclick="setProgram('Accounting and Taxation')">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more Program Cards -->
+            <!-- Program Card 4: Management -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Management</h5>
+                        <p class="card-text">Develop your management skills with our Management programme.</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#registerModal" data-program="Management" onclick="setProgram('Management')">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Program Card 5: Sales and Business Development -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Sales and Business Development</h5>
+                        <p class="card-text">Join our Sales and Business Development programme to enhance your sales skills.</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#registerModal" data-program="Sales and Business Development" onclick="setProgram('Sales and Business Development')">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Program Card 6: Content and Journalism -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Content and Journalism</h5>
+                        <p class="card-text">Learn about Content Creation and Journalism with our specialised programme.</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#registerModal" data-program="Content and Journalism" onclick="setProgram('Content and Journalism')">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more Program Cards -->
+        </div>
+    </div>
+</section>
+
+
+<!-- Modal -->
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registerModalLabel">Sign Up</h5>
+                
+            </div>
+            <div class="modal-body">
+                <form id="registrationForm" action="{{ url_for('submit_registration_form') }}" method="POST">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" name="fullname" placeholder="Full Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="program">Programme</label>
+                        <select class="form-control" id="program" name="program">
+                            <option value="Banking">Banking</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Accounting and Taxation">Accounting and Taxation</option>
+                            <option value="Management">Management</option>
+                            <option value="Sales and Business Development">Sales and Business Development</option>
+                            <option value="Content and Journalism">Content and Journalism</option>
+                            <!-- Add more program options here -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="interests">Subdomain/Areas of Interest</label>
+                        <input type="text" class="form-control" id="interests" name="interests">
+                    </div>
+                    <div class="form-group">
+                        <label for="otherContact">Other Contact Info</label>
+                        <input type="text" class="form-control" id="otherContact" name="otherContact">
+                    </div>
+                    <div class="form-group d-flex justify-content-around">
+                        <button type="button" class="btn btn-secondary mr-2" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+            
+            
+            
+        </div>
+    </div>
+</div>
+
+<footer class="footer mt-auto py-3" style="background-color: bisque;">
+    <div class="container text-center">
+        <span class="text-muted">Contact: +91 9380142763 | Email: <a href="mailto:expertrons@gmail.com">expertrons@gmail.com</a></span>
+    </div>
+</footer>
+
+<script>
+    // Function to set the program value in the modal form
+    function setProgram(program) {
+        document.getElementById('program').value = program;
+        var domainDropdown = document.getElementById('preferred_domain');
+        for (var i = 0; i < domainDropdown.options.length; i++) {
+            if (domainDropdown.options[i].value === program) {
+                domainDropdown.selectedIndex = i;
+                break;
+            }
+        }
+    }
+</script>
+
+
+
+
+    
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="{{ url_for('static', filename='js/expertronsscript.js') }}"></script>
+    <script>
+        $(function () {
+            $(document).scroll(function () {
+                var $nav = $(".navbar");
+                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+            });
+        });
+    </script>
+</body>
+
+</html>
